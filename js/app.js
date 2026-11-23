@@ -762,7 +762,7 @@ function renderAbout() {
       </div>
       <div class="about-bio">
         <h2>台风 <i>@taifeng1230</i></h2>
-        <p>计算机专业在读，全栈方向。白天学 Spring Boot 和 Vue，晚上维护一台 modded Minecraft 服务器；对网络穿透、性能优化和一切"把它跑起来"的工程问题充满热情。相信<b style="color:var(--ink)">最好的学习方式是把踩过的坑写成文章</b>——这个博客就是证据。看板娘友利奈绪负责把这一切拍下来 ✦</p>
+        <p>计算机专业在读，全栈方向。相信<b style="color:var(--ink)">最好的学习方式是把踩过的坑写成文章</b>——这个博客就是证据。看板娘友利奈绪负责把这一切拍下来 ✦</p>
         <div class="about-links">
           <a class="btn btn-primary" href="#/archive">浏览全部文章 ${ICONS.arrow}</a>
           <a class="btn btn-ghost" href="https://github.com/taifeng1230" target="_blank" rel="noopener">${ICONS.code}GitHub</a>
