@@ -798,7 +798,7 @@ function renderAbout() {
         <h3>此刻的状态</h3>
         <div class="fact-list">
           <div class="fact"><span class="fact-ico" style="--fh:190">${ICONS.pin}</span><div><b>坐标</b><span>泰州 · 校园网 CGNAT 深处</span></div></div>
-          <div class="fact"><span class="fact-ico" style="--fh:25">${ICONS.code}</span><div><b>正在学</b><span>学习Java 签到</span></div></div>
+          <div class="fact"><span class="fact-ico" style="--fh:25">${ICONS.code}</span><div><b>正在学</b><span>学习Java 前端</span></div></div>
           <div class="fact"><span class="fact-ico" style="--fh:130">${ICONS.server}</span><div><b>正在维护</b><span>一台 Forge 模组 MC 服务器（frp 穿透中）</span></div></div>
           <div class="fact"><span class="fact-ico" style="--fh:300">${ICONS.spark}</span><div><b>最近在玩</b><span>CS2 / Valorant，以及给 AI IDE 找活干</span></div></div>
         </div>
