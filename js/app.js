@@ -498,8 +498,8 @@ function renderPost(slug) {
     </div>
   </div>`;
 
-  document.title = p.title + " — 台风.dev";
-  onRouteCleanup(() => { document.title = "台风.dev — 白空与星的技术博客"; });
+  document.title = p.title + " — taifeng.cn";
+  onRouteCleanup(() => { document.title = "taifeng.cn — 白空与星的技术博客"; });
 
   // TOC 平滑滚动 + scrollspy
   $("#toc").addEventListener("click", (e) => {
@@ -798,7 +798,7 @@ function renderAbout() {
         <h3>此刻的状态</h3>
         <div class="fact-list">
           <div class="fact"><span class="fact-ico" style="--fh:190">${ICONS.pin}</span><div><b>坐标</b><span>泰州 · 校园网 CGNAT 深处</span></div></div>
-          <div class="fact"><span class="fact-ico" style="--fh:25">${ICONS.code}</span><div><b>正在学</b><span>Spring Boot 3 + 微信小程序 · 课程进行中</span></div></div>
+          <div class="fact"><span class="fact-ico" style="--fh:25">${ICONS.code}</span><div><b>正在学</b><span>学习Java 签到</span></div></div>
           <div class="fact"><span class="fact-ico" style="--fh:130">${ICONS.server}</span><div><b>正在维护</b><span>一台 Forge 模组 MC 服务器（frp 穿透中）</span></div></div>
           <div class="fact"><span class="fact-ico" style="--fh:300">${ICONS.spark}</span><div><b>最近在玩</b><span>CS2 / Valorant，以及给 AI IDE 找活干</span></div></div>
         </div>
@@ -831,7 +831,7 @@ function feedXML() {
   return `<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0">
   <channel>
-    <title>台风.dev — 白空与星</title>
+    <title>taifeng.cn — 白空与星</title>
     <link>${base}</link>
     <description>前端 / 后端 / 网络 / 运维实战笔记 · 看板娘友利奈绪</description>
     <language>zh-cn</language>
@@ -1004,7 +1004,7 @@ function renderAppList() {
     if (!it) return;
     const act = btn.dataset.act;
     if (act === "copy") {
-      const text = `【友链申请】\n站点：${it.name}\n地址：${it.url}\n头像：${it.avatar || "（无）"}\n介绍：${it.desc}\n邮箱：${it.email || "（无）"}\n—— 来自 台风.dev 友链页`;
+      const text = `【友链申请】\n站点：${it.name}\n地址：${it.url}\n头像：${it.avatar || "（无）"}\n介绍：${it.desc}\n邮箱：${it.email || "（无）"}\n—— 来自 taifeng.cn 友链页`;
       navigator.clipboard.writeText(text).then(() => toast("申请信息已复制，发给站长即可 ✦")).catch(() => toast("复制失败", "err"));
       return;
     }
