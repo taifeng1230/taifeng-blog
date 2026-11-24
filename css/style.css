@@ -967,3 +967,9 @@ svg { display: block; }
   .wrap, .hero-inner, .post-layout { padding-left: 16px; padding-right: 16px; }
   .back-top { right: 16px; bottom: 16px; }
 }
+
+@media (max-width: 380px) {
+  .nav-inner { gap: 8px; padding: 0 10px; }
+  .logo-mark { display: none; }
+  .logo-text { font-size: 1rem; }
+}
