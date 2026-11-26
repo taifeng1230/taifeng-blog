@@ -1,5 +1,5 @@
 /* ============================================================
-   台风.dev · 白空与星 — 白色为主的二次元配色
+   taifeng1230.cn · 白空与星 — 白色为主的二次元配色
    取色自友利奈绪：星之森制服绯红 × 领结琥珀 × 瞳色钴蓝 × 银发冷灰
    昼：白空（white-dominant）  夜：星空（Charlotte 星夜）
    ============================================================ */
@@ -171,7 +171,7 @@ svg { display: block; }
 .logo { display: flex; align-items: center; gap: 10px; color: var(--brand-deep); }
 .logo-mark { width: 32px; height: 32px; animation: spin-slow 18s linear infinite; }
 @keyframes spin-slow { to { transform: rotate(360deg); } }
-.logo-text { font-weight: 900; font-size: 1.16rem; color: var(--ink); letter-spacing: .5px; }
+.logo-text { font-weight: 900; font-size: 1.06rem; color: var(--ink); letter-spacing: .3px; }
 .logo-text i { font-style: normal; color: var(--brand-deep); font-family: var(--mono); }
 
 .nav-links { position: relative; display: flex; gap: 2px; margin-left: 6px; }
@@ -924,6 +924,7 @@ svg { display: block; }
 @media (max-width: 720px) {
   :root { --nav-h: 68px; }
   .nav-inner { gap: 10px; padding: 0 14px; }
+  .logo-text { font-size: .95rem; letter-spacing: 0; }
   .nav.scrolled .nav-inner { max-width: calc(100% - 16px); margin: 8px auto; padding: 0 14px; }
   .search-trigger kbd { display: none; }
   .menu-btn { display: flex; }

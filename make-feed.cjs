@@ -14,7 +14,7 @@ const items = posts.map((x) => `    <item>
 const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0">
   <channel>
-    <title>台风.dev — 白空与星</title>
+    <title>taifeng1230.cn — 白空与星</title>
     <link>${base}</link>
     <description>前端 / 后端 / 网络 / 运维实战笔记 · 看板娘友利奈绪</description>
     <language>zh-cn</language>

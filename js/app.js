@@ -1,5 +1,5 @@
 /* ============================================================
-   台风.dev — 应用逻辑：路由 / Markdown / 高亮 / 搜索 / 互动
+   taifeng1230.cn — 应用逻辑：路由 / Markdown / 高亮 / 搜索 / 互动
    ============================================================ */
 (function () {
 "use strict";
@@ -498,8 +498,8 @@ function renderPost(slug) {
     </div>
   </div>`;
 
-  document.title = p.title + " — 台风.dev";
-  onRouteCleanup(() => { document.title = "台风.dev — 白空与星的技术博客"; });
+  document.title = p.title + " — taifeng1230.cn";
+  onRouteCleanup(() => { document.title = "taifeng1230.cn — 白空与星的技术博客"; });
 
   // TOC 平滑滚动 + scrollspy
   $("#toc").addEventListener("click", (e) => {
@@ -831,7 +831,7 @@ function feedXML() {
   return `<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0">
   <channel>
-    <title>台风.dev — 白空与星</title>
+    <title>taifeng1230.cn — 白空与星</title>
     <link>${base}</link>
     <description>前端 / 后端 / 网络 / 运维实战笔记 · 看板娘友利奈绪</description>
     <language>zh-cn</language>
@@ -1004,7 +1004,7 @@ function renderAppList() {
     if (!it) return;
     const act = btn.dataset.act;
     if (act === "copy") {
-      const text = `【友链申请】\n站点：${it.name}\n地址：${it.url}\n头像：${it.avatar || "（无）"}\n介绍：${it.desc}\n邮箱：${it.email || "（无）"}\n—— 来自 台风.dev 友链页`;
+      const text = `【友链申请】\n站点：${it.name}\n地址：${it.url}\n头像：${it.avatar || "（无）"}\n介绍：${it.desc}\n邮箱：${it.email || "（无）"}\n—— 来自 taifeng1230.cn 友链页`;
       navigator.clipboard.writeText(text).then(() => toast("申请信息已复制，发给站长即可 ✦")).catch(() => toast("复制失败", "err"));
       return;
     }
