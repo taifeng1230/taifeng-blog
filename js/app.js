@@ -498,8 +498,8 @@ function renderPost(slug) {
     </div>
   </div>`;
 
-  document.title = p.title + " — taifeng1230.cn";
-  onRouteCleanup(() => { document.title = "taifeng1230.cn — 白空与星的技术博客"; });
+  document.title = p.title + " — 台风.dev";
+  onRouteCleanup(() => { document.title = "台风.dev — 白空与星的技术博客"; });
 
   // TOC 平滑滚动 + scrollspy
   $("#toc").addEventListener("click", (e) => {
@@ -762,7 +762,7 @@ function renderAbout() {
       </div>
       <div class="about-bio">
         <h2>台风 <i>@taifeng1230</i></h2>
-        <p>计算机专业在读，全栈方向。相信<b style="color:var(--ink)">最好的学习方式是把踩过的坑写成文章</b>——这个博客就是证据。看板娘友利奈绪负责把这一切拍下来 ✦</p>
+        <p>计算机专业在读，全栈方向。白天学 Spring Boot 和 Vue，晚上维护一台 modded Minecraft 服务器；对网络穿透、性能优化和一切"把它跑起来"的工程问题充满热情。相信<b style="color:var(--ink)">最好的学习方式是把踩过的坑写成文章</b>——这个博客就是证据。看板娘友利奈绪负责把这一切拍下来 ✦</p>
         <div class="about-links">
           <a class="btn btn-primary" href="#/archive">浏览全部文章 ${ICONS.arrow}</a>
           <a class="btn btn-ghost" href="https://github.com/taifeng1230" target="_blank" rel="noopener">${ICONS.code}GitHub</a>
@@ -798,7 +798,7 @@ function renderAbout() {
         <h3>此刻的状态</h3>
         <div class="fact-list">
           <div class="fact"><span class="fact-ico" style="--fh:190">${ICONS.pin}</span><div><b>坐标</b><span>泰州 · 校园网 CGNAT 深处</span></div></div>
-          <div class="fact"><span class="fact-ico" style="--fh:25">${ICONS.code}</span><div><b>正在学</b><span>学习Java 前端</span></div></div>
+          <div class="fact"><span class="fact-ico" style="--fh:25">${ICONS.code}</span><div><b>正在学</b><span>Spring Boot 3 + 微信小程序 · 课程进行中</span></div></div>
           <div class="fact"><span class="fact-ico" style="--fh:130">${ICONS.server}</span><div><b>正在维护</b><span>一台 Forge 模组 MC 服务器（frp 穿透中）</span></div></div>
           <div class="fact"><span class="fact-ico" style="--fh:300">${ICONS.spark}</span><div><b>最近在玩</b><span>CS2 / Valorant，以及给 AI IDE 找活干</span></div></div>
         </div>
@@ -831,7 +831,7 @@ function feedXML() {
   return `<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0">
   <channel>
-    <title>taifeng1230.cn — 白空与星</title>
+    <title>台风.dev — 白空与星</title>
     <link>${base}</link>
     <description>前端 / 后端 / 网络 / 运维实战笔记 · 看板娘友利奈绪</description>
     <language>zh-cn</language>
@@ -843,11 +843,11 @@ ${items}
 }
 function openRss() {
   const served = location.protocol !== "file:";
-  $("#rssUrl").textContent = served ? location.origin + "/rss.xml" : "（file:// 打开时无订阅地址）";
+  $("#rssUrl").textContent = served ? feedBase() + "rss.xml" : "（file:// 打开时无订阅地址）";
   $("#rssCopy").style.display = served ? "" : "none";
   $("#rssNote").textContent = served
-    ? "把地址粘贴进阅读器的「添加订阅」即可。注意：地址由本机服务实时生成，需保持服务运行（双击 start.cmd 或 node serve.cjs）；服务停止后地址会失效。"
-    : "当前以 file:// 打开：可下载 feed.xml 导入阅读器；双击 start.cmd 启动服务后即可获得订阅地址。";
+    ? "把地址粘贴进阅读器的「添加订阅」即可。本地 node serve.cjs 时 feed 实时生成；静态托管（GitHub Pages 等）使用随包部署的 rss.xml，新增文章后运行 node make-feed.cjs 重新生成并部署。"
+    : "当前以 file:// 打开：可下载 feed.xml 导入阅读器；双击 start-website.cmd 启动服务后即可获得订阅地址。";
   $("#rssOverlay").hidden = false;
 }
 function closeRss() { $("#rssOverlay").hidden = true; }
@@ -1004,7 +1004,7 @@ function renderAppList() {
     if (!it) return;
     const act = btn.dataset.act;
     if (act === "copy") {
-      const text = `【友链申请】\n站点：${it.name}\n地址：${it.url}\n头像：${it.avatar || "（无）"}\n介绍：${it.desc}\n邮箱：${it.email || "（无）"}\n—— 来自 taifeng1230.cn 友链页`;
+      const text = `【友链申请】\n站点：${it.name}\n地址：${it.url}\n头像：${it.avatar || "（无）"}\n介绍：${it.desc}\n邮箱：${it.email || "（无）"}\n—— 来自 台风.dev 友链页`;
       navigator.clipboard.writeText(text).then(() => toast("申请信息已复制，发给站长即可 ✦")).catch(() => toast("复制失败", "err"));
       return;
     }
